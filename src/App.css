@@ -1,38 +1,97 @@
 .App {
-  text-align: center;
+    text-align: center;
+}
+.logo {
+    min-height: 50px;
+    max-height: 100px;
+}
+.hero-content {
+    color: #0097fe;
+    text-transform: capitalize;
+    font-size: xx-large;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Base styles */
+
+.diagonal-div {
+    background-color: #1c34a1;
+    height: 900px;
+    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    padding: 20px;
+    color: white;
+    text-align: center; /* Center text */
+}
+.content h1 {
+    text-transform: capitalize;
+    text-align: justify;
+}
+.content p {
+    text-transform: capitalize;
+    text-align: justify;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-gap: 20px; /* Gap between cards */
+    margin-top: 20px; /* Add space between content and cards */
+    align-items: center; /* Center cards vertically */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Make it a square */
+    background-color: #ffffff; /* White background */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Add padding for content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #006fba;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.full-width-card {
+    grid-column: span 2; /* Make the card span two columns */
 }
 
-.App-link {
-  color: #61dafb;
+/* Responsive adjustments */
+
+@media only screen and (max-width: 768px) {
+    .diagonal-div {
+        flex-direction: column; /* Change to column direction on small screens */
+        height: auto; /* Reset height */
+    }
+    .cards {
+        grid-template-columns: 1fr; /* Display cards in one column */
+    }
+}
+@media only screen and (max-width: 768px) {
+    .diagonal-div {
+        padding-top: 300px; /* Add padding of 15% on smaller screens */
+        padding-bottom: 300px; /* Add padding of 15% on smaller screens */
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section3 {
+    background-color: #fff;
+    height: 200px;
+}
+
+.learmore-Btn {
+    background-image: linear-gradient(to right, #6a36ff, #ac5fe6);
+    width: 120px;
+    height: 46px;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: start;
+    color: #fff;
+}
+
+.content-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }

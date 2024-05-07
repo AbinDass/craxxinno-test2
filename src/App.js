@@ -2,6 +2,9 @@
 import "./App.css";
 import logo from "./assets/craxxinno.png";
 function App() {
+  function lernMore(){
+    alert(`sign in first to lern more`)
+  }
     return (
         <div className="App">
             <div className="">
@@ -24,7 +27,7 @@ function App() {
                             <br /> Diam ut id nisl tellus rhoncus, imperdiet consequat ornare.{" "}
                         </p>
                     </div>
-                    <button className="learmore-Btn">Learn More</button>
+                    <button className="learmore-Btn" onClick={lernMore}>Learn More</button>
                 </div>
                 <div className="card-row">
                     <div className="cards">
